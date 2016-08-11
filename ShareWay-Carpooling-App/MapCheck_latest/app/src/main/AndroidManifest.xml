@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nraut.mapcheck">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <permission android:name="com.android.email.permission.ACCESS_PROVIDER"
+        android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCU8kXABy1C4uOhTAITLkQlXACj-DOvHsk" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_maps">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Profile_Creation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DisplayListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ProcessData"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PersonInfoDisplay"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DecisionPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RequestList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutUs"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ProfilePage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainPage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--<activity android:name=".BaseActivity"></activity>-->
+    </application>
+
+</manifest>
